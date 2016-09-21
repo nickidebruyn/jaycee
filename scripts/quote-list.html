@@ -1,0 +1,37 @@
+<div class="container">
+        <div class="row">
+
+            <div class="col-lg-12 my-header">
+                <h1>JaCee Quotations</h1>
+                <p>Click on the New Quote button to create a new quote for your client.</p>
+            </div>
+            
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-lg-12">
+                
+                <table class="quote-table">
+                    <tr>
+                        <th>Quote Name</th>
+                        <th>Client</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+
+                    <tr ng-repeat="quote in vm.quotes">
+                        <td>{{quote.name}}</td>
+                        <td>{{quote.client}}</td>
+                        <td>{{quote.date}}</td>
+                        <td style="width: 100px;"><a href="#">View</a></td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+            
+        </div>
+</div>

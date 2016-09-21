@@ -48,55 +48,20 @@ footer {
   
 }
 
-.large-tile {
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: box-shadow;
-  transition-property: box-shadow;
-
-  display: block;
-  padding: 4px;
-  margin-bottom: 20px;
-  line-height: 1.42857143;
-  background-color: #fff;
-  border: 0px solid #ddd;
-  border-radius: 0px;
-  -webkit-transition: border .2s ease-in-out;
-       -o-transition: border .2s ease-in-out;
-          transition: border .2s ease-in-out;
+table.quote-table {
+  width: 100%;
+  border: 1px solid gray;
 }
 
-
-.large-tile > img,
-.large-tile a > img {
-  margin-right: auto;
-  margin-left: auto;
+table.quote-table tr {
+  border-bottom: 1px solid gray;
 }
-a.large-tile:hover,
-a.large-tile:focus,
-a.large-tile.active {
-  /*box-shadow: 0 0 20px rgba(0, 0, 0, 1);*/
-  box-shadow: inset 0 0 0 4px green, 0 0 20px rgba(0, 0, 0, 1);
-
-}
-
-.large-tile .caption {
+table.quote-table th {
+  background: #000;
   padding: 5px;
-  color: #333;  
-
+  color: silver;
 }
-
-h3 {
-  font-size: 150%;
-}
-
-a:hover {
-  text-decoration: none;
+table.quote-table td {
+  border-left: 1px solid gray;
+  padding: 5px;
 }
