@@ -138,9 +138,16 @@
                                             <td><input name="qty" id="qty" type="text" class="form-control" ng-model="item.qty" required smartFloat min="0" max="999"/></td>
                                             <td><input name="description" id="description" type="text" class="form-control" ng-model="item.description"/></td>
                                             <td><input name="unitPrice" id="unitPrice" type="text" class="form-control" ng-model="item.unitPrice"/></td>
-                                            <td><input name="totalPrice" id="totalPrice" type="text" class="form-control" ng-model="(item.unitPrice*item.qty)"/></td>
+                                            <td><input name="totalPrice" id="totalPrice" type="text" class="form-control" ng-model="getItemTotalPrice(item)"/></td>
                                             <td><button ng-click="vm.remove(item)" class="btn btn-danger">Remove</button></td>
                                         </tr>                                        
+
+                                        <tr>
+                                            <td colspan="4"><b>SUB TOTAL</b></td>
+                                            <td>{{vm.getSubTotal()}}</td>
+                                            <td>&nbsp;</td>
+                                        </tr>                                        
+
                                     </tbody>
                                 </table>
 

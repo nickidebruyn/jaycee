@@ -25,6 +25,8 @@
     vm.save = save;
     vm.add = add;
     vm.remove = remove;
+    vm.getItemTotalPrice = getItemTotalPrice;
+    vm.getSubTotal = getSubTotal;
 
     vm.quote = {
       clientName: "",
@@ -45,6 +47,20 @@
 
     }
 
+    function getItemTotalPrice(item) {
+      var total = 0;
+      if (item.unitPrice != null && item.qty != null) {
+        total = item.unitPrice*item.qty;
+      }
+      return total;
+    }
+
+    function getSubTotal() {
+      var total = 0;
+
+      return total;
+    }
+
 
     function cancel() {
       $location.path( "/");
@@ -60,16 +76,16 @@
       console.log("Quote successfully saved: ", vm.quote);
 
 
+
       //Generate the js pdf
       var doc = new jsPDF();
 
-      var docWidth = 800;
+      // I know the proper spelling is colour ;)
+      doc.setTextColor(0);
+      doc.text(40, 20, 'EXCEPTIONAL SERVICE SINCE 1979');
 
-      doc.setFontSize(32);
-      doc.setTextColor(230);
-      doc.text(400, 20, 'EXCEPTIONAL SERVICE SINCE 1979');
+      doc.save('Quote.pdf');
 
-      doc.save('Test.pdf');
 
       $location.path( "/");
 
