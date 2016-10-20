@@ -65,3 +65,32 @@ table.quote-table td {
   border-left: 1px solid gray;
   padding: 5px;
 }
+
+
+.required {
+    color: #f44336;
+}
+.error-msg {
+    color: #b94a48;
+}
+
+
+.error-messages {
+    color: #b94a48;
+}
+
+.error-message.ng-enter-prepare {
+    opacity: 0;
+}
+
+.error-message.ng-enter{
+    transition: all .5s linear;
+}
+
+.error-message.ng-enter {
+    opacity: 0;
+}
+
+.error-message.ng-enter-active {
+    opacity: 1;
+}
