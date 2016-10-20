@@ -51,14 +51,19 @@
       console.log("getItemTotals() ", item);
 
       var total = 0;
-      // if (item.unitPrice != undefined && item.qty != undefined) {
-      //   total = item.unitPrice*item.qty;
-      // }
+      if (item.unitPrice != undefined && item.qty != undefined) {
+        total = item.unitPrice*item.qty;
+      }
       return total;
     }
 
     function getSubTotal() {
       var total = 0;
+
+      for (var i = vm.quote.items.length - 1; i >= 0; i--) {
+        var unitTotal = getItemTotalPrice(vm.quote.items[i]);
+        total += unitTotal;
+      };
 
       return total;
     }

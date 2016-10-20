@@ -137,7 +137,7 @@
                                             <td><input name="size" id="size" type="text" class="form-control" ng-model="item.size"/></td>
                                             <td><input name="qty" id="qty" type="text" class="form-control" ng-model="item.qty" required smartFloat min="0" max="999"/></td>
                                             <td><input name="description" id="description" type="text" class="form-control" ng-model="item.description"/></td>
-                                            <td><input name="unitPrice" id="unitPrice" type="text" class="form-control" ng-model="item.unitPrice"/></td>
+                                            <td><input name="unitPrice" id="unitPrice" type="text" class="form-control" ng-model="item.unitPrice" required smartFloat min="0" max="100000000"/></td>
                                             <td><input name="totalPrice" id="totalPrice" type="text" class="form-control" ng-model="vm.getItemTotalPrice(item)" ng-disabled="true"/></td>
                                             <td><button ng-click="vm.remove(item)" class="btn btn-danger">Remove</button></td>
                                         </tr>                                        
