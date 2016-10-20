@@ -142,7 +142,7 @@
 
       doc.setTextColor(0);
       doc.setFontSize(10);
-      doc.text(10, posY , "WINDOW");
+      doc.text(12, posY , "WINDOW");
       doc.text(50, posY , "SIZE (B X H)");
       doc.text(75, posY , "QTY");
       doc.text(90, posY , "DESCRIPTION");
@@ -160,7 +160,7 @@
 
       doc.setTextColor(0);
       doc.setFontSize(8);
-      doc.text(10, posY + (count * spacing), item.name);
+      doc.text(12, posY + (count * spacing), item.name);
       doc.text(50, posY + (count * spacing), item.size);
       doc.text(75, posY + (count * spacing), item.qty + "");
       doc.text(90, posY + (count * spacing), item.description);
@@ -205,7 +205,7 @@
       doc.text(140, posY , "TOTAL");
       doc.text(170, posY , "" + getTotal());
 
-      doc.rect(10, 30, 190, posY-20);
+      doc.rect(10, 30, 190, posY-26);
 
     }
 
