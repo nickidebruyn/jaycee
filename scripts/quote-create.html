@@ -138,15 +138,25 @@
                                             <td><input name="qty" id="qty" type="text" class="form-control" ng-model="item.qty" required smartFloat min="0" max="999"/></td>
                                             <td><input name="description" id="description" type="text" class="form-control" ng-model="item.description"/></td>
                                             <td><input name="unitPrice" id="unitPrice" type="text" class="form-control" ng-model="item.unitPrice"/></td>
-                                            <td><input name="totalPrice" id="totalPrice" type="text" class="form-control" ng-model="vm.getItemTotalPrice(item)"/></td>
+                                            <td><input name="totalPrice" id="totalPrice" type="text" class="form-control" ng-model="vm.getItemTotalPrice(item)" ng-disabled="true"/></td>
                                             <td><button ng-click="vm.remove(item)" class="btn btn-danger">Remove</button></td>
                                         </tr>                                        
 
                                         <tr>
                                             <td colspan="5" style="text-align: right;"><b>SUB TOTAL</b></td>
-                                            <td>{{vm.getSubTotal()}}</td>
+                                            <td><input name="subTotal" id="subTotal" type="text" class="form-control" ng-model="vm.getSubTotal()" ng-disabled="true"/></td>
                                             <td>&nbsp;</td>
                                         </tr>                                        
+                                        <tr>
+                                            <td colspan="5" style="text-align: right;"><b>VAT</b></td>
+                                            <td><input name="vat" id="vat" type="text" class="form-control" ng-model="vm.getVatTotal()" ng-disabled="true"/></td>
+                                            <td>&nbsp;</td>
+                                        </tr>                                        
+                                        <tr>
+                                            <td colspan="5" style="text-align: right;"><b>TOTAL</b></td>
+                                            <td><input name="total" id="total" type="text" class="form-control" ng-model="vm.getTotal()" ng-disabled="true"/></td>
+                                            <td>&nbsp;</td>
+                                        </tr>
 
                                     </tbody>
                                 </table>

@@ -48,10 +48,12 @@
     }
 
     function getItemTotalPrice(item) {
+      console.log("getItemTotals() ", item);
+
       var total = 0;
-      if (item.unitPrice != undefined && item.qty != undefined) {
-        total = item.unitPrice*item.qty;
-      }
+      // if (item.unitPrice != undefined && item.qty != undefined) {
+      //   total = item.unitPrice*item.qty;
+      // }
       return total;
     }
 
@@ -61,6 +63,17 @@
       return total;
     }
 
+    function getVatTotal() {
+      var total = 0;
+
+      return total;
+    }
+
+    function getTotal() {
+      var total = 0;
+
+      return total;
+    }
 
     function cancel() {
       $location.path( "/");
