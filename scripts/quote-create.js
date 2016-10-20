@@ -112,6 +112,8 @@
       doc.setTextColor(0);
       doc.text(100, 20, 'EXCEPTIONAL SERVICE SINCE 1979');
 
+      addDocHeader();
+
       for (var i = 0; i < vm.quote.items.length; i++) {
         var item = vm.quote.items[i];
         addDocRow(doc, item, i);
@@ -124,15 +126,30 @@
 
     }
 
-    function addDocRow(doc, item, count) {
+    function addDocHeader() {
 
       var spacing = 8;
 
       doc.setTextColor(0);
       doc.setFontSize(10);
-      doc.text(10, 30 + (count * spacing), item.name);
+      doc.text(10, 30 + (count * spacing), "WINDOW");
+      doc.text(50, 30 + (count * spacing), "SIZE (B X H)");
+      doc.text(90, 30 + (count * spacing), "QTY");
+      doc.text(110, 30 + (count * spacing), "DESCRIPTION");
+      doc.text(210, 30 + (count * spacing), "UNIT PRICE");
+      doc.text(260, 30 + (count * spacing), "TOTAL PRICE");
 
-      doc.text(30, 30 + (count * spacing), item.unitPrice + "");
+    }
+
+    function addDocRow(doc, item, count) {
+
+      var spacing = 8;
+
+      doc.setTextColor(0);
+      doc.setFontSize(89);
+      doc.text(10, 60 + (count * spacing), item.name);
+
+      doc.text(30, 60 + (count * spacing), item.unitPrice + "");
 
     }
 
