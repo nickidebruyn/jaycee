@@ -8,7 +8,7 @@
 
   function routeConfig($routeProvider) {
     $routeProvider
-    .when('/', {
+    .when('/list', {
       templateUrl: 'scripts/quote-list.html',
       controller: 'QuoteListController',
       controllerAs: 'vm'
