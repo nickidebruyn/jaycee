@@ -132,7 +132,7 @@
       doc.setFontSize(10);
       doc.text(10, 30 + (count * spacing), item.name);
 
-      doc.text(30, 30 + (count * spacing), item.unitPrice);
+      doc.text(30, 30 + (count * spacing), item.unitPrice + "");
 
     }
 
