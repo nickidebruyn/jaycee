@@ -113,6 +113,8 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-md-12">
+                                <button ng-click="vm.add()" class="btn btn-default">Add Item</button>
+
                                 <table class="table">
                                     <thead>
                                         <tr>
@@ -135,8 +137,7 @@
                                             <td><input name="unitPrice" id="unitPrice" type="text" class="form-control" ng-model="item.unitPrice"/></td>
                                             <td><input name="totalPrice" id="totalPrice" type="text" class="form-control" ng-model="item.totalPrice"/></td>
                                             <td><button ng-click="vm.remove(item)" class="btn btn-danger">Remove</button></td>
-                                        </tr>
-                                        <button ng-click="vm.add()" class="btn btn-default">Add</button>
+                                        </tr>                                        
                                     </tbody>
                                 </table>
 
