@@ -49,7 +49,7 @@
 
     function getItemTotalPrice(item) {
       var total = 0;
-      if (item.unitPrice != null && item.qty != null) {
+      if (item.unitPrice != undefined && item.qty != undefined) {
         total = item.unitPrice*item.qty;
       }
       return total;
