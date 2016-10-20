@@ -128,16 +128,14 @@
 
     function addDocHeader(doc) {
 
-      var spacing = 8;
-
       doc.setTextColor(0);
       doc.setFontSize(10);
-      doc.text(10, 30 + (count * spacing), "WINDOW");
-      doc.text(50, 30 + (count * spacing), "SIZE (B X H)");
-      doc.text(90, 30 + (count * spacing), "QTY");
-      doc.text(110, 30 + (count * spacing), "DESCRIPTION");
-      doc.text(210, 30 + (count * spacing), "UNIT PRICE");
-      doc.text(260, 30 + (count * spacing), "TOTAL PRICE");
+      doc.text(10, 30 , "WINDOW");
+      doc.text(50, 30 , "SIZE (B X H)");
+      doc.text(90, 30 , "QTY");
+      doc.text(110, 30 , "DESCRIPTION");
+      doc.text(210, 30 , "UNIT PRICE");
+      doc.text(260, 30 , "TOTAL PRICE");
 
     }
 
