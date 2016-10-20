@@ -80,6 +80,8 @@
       doc.setTextColor(0, 0, 255);
       doc.text(20, 60, 'This is blue.');
 
+      doc.save('Test.pdf');
+
 
       $location.path( "/");
 
