@@ -22,7 +22,14 @@
     var vm = this;
 
     vm.quote = {
-      
+      clientName: "Test client",
+      clientTel: 1223424,
+      clientCell: 1223424,
+      clientFax: 1223424,
+      clientContact: "bla bla",
+      clientDetails: ""
+
+
     }
 
 

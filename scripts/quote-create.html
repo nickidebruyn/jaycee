@@ -1,22 +1,48 @@
 <div class="container">
-        <div class="row">
+    <div class="row">
 
-            <div class="col-lg-12 my-header">
-                <h1>New Quote</h1>
-                <p>Please complete all fields below.</p>
-            </div>
-            
+        <div class="col-lg-12 my-header">
+            <h1>New Quote</h1>
+            <p>Please complete all fields below.</p>
         </div>
 
+    </div>
 
-        <div class="row">
 
-            <div class="col-lg-12">
+    <div class="row">
 
-                
-                
+        <div class="col-lg-12">
+            <form name="vm.form">
 
-            </div>
-            
+                <!-- PANEL FOR Client -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Client Details</h3>
+                    </div>
+                </div>
+
+                <div class="panel-body">
+
+                    <!--Name-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group" ng-class="{ 'has-error': vm.form.clientName.$invalid && vm.form.clientName.$dirty }">                        
+                                <label for="clientName" class="control-label">Name <span class="required">*</span></label>
+                                <input id="clientName" name="clientName" type="text"  class="form-control" placeholder="" ng-model="vm.quote.clientName" required>
+
+                                <div ng-messages="vm.form.clientName.$error" ng-if='vm.form.clientName.$dirty' class="error-messages" role="alert">
+                                    <div ng-message="required" class="error-message">This field is required</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+
         </div>
+
+    </div>
+    
 </div>
