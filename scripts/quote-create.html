@@ -122,6 +122,7 @@
                                             <th>DESCRIPTION</th>
                                             <th>UNIT PRICE</th>
                                             <th>TOTAL PRICE</th>
+                                            <th>ACTION</th>
                                         </tr>
                                     </thead>
 
@@ -133,6 +134,7 @@
                                             <td><input name="description" id="description" type="text" class="form-control" ng-model="item.description"/></td>
                                             <td><input name="unitPrice" id="unitPrice" type="text" class="form-control" ng-model="item.unitPrice"/></td>
                                             <td><input name="totalPrice" id="totalPrice" type="text" class="form-control" ng-model="item.totalPrice"/></td>
+                                            <td><button ng-click="vm.add()" class="btn btn-default">Add</button></td>
                                         </tr>
                                     </tbody>
                                 </table>

@@ -23,6 +23,7 @@
 
     vm.cancel = cancel;
     vm.save = save;
+    vm.add = add;
 
     vm.quote = {
       clientName: "",
@@ -56,6 +57,21 @@
       }
 
       console.log("Quote successfully saved: ", vm.quote);
+
+    }
+
+    function add() {
+      console.log("Add item to quote ", vm.quote);
+
+      var item = {        
+        name: "",
+        size: 0,
+        qty: 1,
+        description: "",
+        unitPrice: 0
+      };
+
+      vm.quote.push(item);
 
     }
 
