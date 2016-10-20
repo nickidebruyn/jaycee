@@ -66,11 +66,10 @@
       var docWidth = 800;
 
       doc.setFontSize(32);
-      doc.setTextColor(0);
+      doc.setTextColor(230);
       doc.text(400, 20, 'EXCEPTIONAL SERVICE SINCE 1979');
 
       doc.save('Test.pdf');
-
 
       $location.path( "/");
 
