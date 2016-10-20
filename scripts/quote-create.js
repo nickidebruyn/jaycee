@@ -31,19 +31,19 @@
     vm.getTotal = getTotal;
 
     vm.quote = {
-      clientName: "",
-      clientAddress: "",
-      clientTel: null,
-      clientCell: null,
-      clientFax: null,
-      clientContact: "",
-      clientDetails: "",
+      clientName: "xxxxxxx",
+      clientAddress: "xxxx",
+      clientTel: 2222222,
+      clientCell: 3333333,
+      clientFax: 444444,
+      clientContact: "ffffffffffffffffff",
+      clientDetails: "sdfsdfsdfsdf",
       items: [{        
-        name: "",
-        size: "",
+        name: "window1",
+        size: "222x300",
         qty: 1,
-        description: "",
-        unitPrice: 0
+        description: "bla bgasdvsd svsw",
+        unitPrice: 220
       }
       ]
 
@@ -144,7 +144,7 @@
       doc.setFontSize(10);
       doc.text(10, posY , "WINDOW");
       doc.text(50, posY , "SIZE (B X H)");
-      doc.text(70, posY , "QTY");
+      doc.text(75, posY , "QTY");
       doc.text(90, posY , "DESCRIPTION");
       doc.text(140, posY , "UNIT PRICE");
       doc.text(170, posY , "TOTAL PRICE");
@@ -162,7 +162,7 @@
       doc.setFontSize(8);
       doc.text(10, posY + (count * spacing), item.name);
       doc.text(50, posY + (count * spacing), item.size);
-      doc.text(70, posY + (count * spacing), item.qty + "");
+      doc.text(75, posY + (count * spacing), item.qty + "");
       doc.text(90, posY + (count * spacing), item.description);
       doc.text(140, posY + (count * spacing), item.unitPrice + "");
       doc.text(170, posY + (count * spacing), getItemTotalPrice(item) + "");
