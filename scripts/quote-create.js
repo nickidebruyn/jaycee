@@ -132,10 +132,10 @@
       doc.setFontSize(10);
       doc.text(10, 30 , "WINDOW");
       doc.text(50, 30 , "SIZE (B X H)");
-      doc.text(90, 30 , "QTY");
-      doc.text(110, 30 , "DESCRIPTION");
-      doc.text(210, 30 , "UNIT PRICE");
-      doc.text(260, 30 , "TOTAL PRICE");
+      doc.text(80, 30 , "QTY");
+      doc.text(90, 30 , "DESCRIPTION");
+      doc.text(160, 30 , "UNIT PRICE");
+      doc.text(180, 30 , "TOTAL PRICE");
 
     }
 
@@ -144,7 +144,7 @@
       var spacing = 8;
 
       doc.setTextColor(0);
-      doc.setFontSize(89);
+      doc.setFontSize(8);
       doc.text(10, 60 + (count * spacing), item.name);
 
       doc.text(30, 60 + (count * spacing), item.unitPrice + "");
