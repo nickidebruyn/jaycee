@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  var quoteApp = angular.module('quoteApp', ['ngRoute']);
+  var quoteApp = angular.module('quoteApp', ['ngCookies', 'ngRoute', 'ngMessages']);
 
     quoteApp.config(function($routeProvider) {
             $routeProvider
