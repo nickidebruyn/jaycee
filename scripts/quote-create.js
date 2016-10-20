@@ -147,6 +147,8 @@
       doc.text(150, posY , "UNIT PRICE");
       doc.text(180, posY , "TOTAL PRICE");
 
+      doc.line(10, posY+8, 210, posY+8);
+
     }
 
     function addDocRow(doc, item, count) {
@@ -171,19 +173,21 @@
       var posY = 40 + (vm.quote.items.length * spacing);
 
       doc.setTextColor(0);
-      doc.setFontSize(12);
+      doc.setFontSize(11);
       doc.text(150, posY , "SUB TOTAL");
       doc.text(180, posY , "" + getSubTotal());
+
+      doc.line(10, posY+8, 210, posY+8);
 
     }
 
     function addVatTotalsFooter(doc) {
 
       var spacing = 6;
-      var posY = 50 + (vm.quote.items.length * spacing);
+      var posY = 46 + (vm.quote.items.length * spacing);
 
       doc.setTextColor(0);
-      doc.setFontSize(12);
+      doc.setFontSize(11);
       doc.text(150, posY , "VAT");
       doc.text(180, posY , "" + getVatTotal());
 
@@ -192,10 +196,10 @@
     function addTotalsFooter(doc) {
 
       var spacing = 6;
-      var posY = 60 + (vm.quote.items.length * spacing);
+      var posY = 52 + (vm.quote.items.length * spacing);
 
       doc.setTextColor(0);
-      doc.setFontSize(12);
+      doc.setFontSize(11);
       doc.text(150, posY , "TOTAL");
       doc.text(180, posY , "" + getTotal());
 
