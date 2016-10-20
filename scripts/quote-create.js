@@ -31,8 +31,15 @@
       clientCell: null,
       clientFax: null,
       clientContact: "",
-      clientDetails: ""
-
+      clientDetails: "",
+      items: [{        
+        name: "",
+        size: 0,
+        qty: 1,
+        description: "",
+        unitPrice: 0
+      }
+      ]
 
     }
 

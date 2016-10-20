@@ -103,6 +103,48 @@
                 </div>
 
 
+
+                <!-- PANEL FOR PRODUCTS -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Products</h3>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>WINDOW</th>
+                                            <th>SIZE (BxH)</th>
+                                            <th>QTY</th>
+                                            <th>DESCRIPTION</th>
+                                            <th>UNIT PRICE</th>
+                                            <th>TOTAL PRICE</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr ng-repeat="item in vm.quote.items">
+                                            <td><input name="name" id="name" type="text" class="form-control" ng-model="item.name"/></td>
+                                            <td><input name="size" id="size" type="text" class="form-control" ng-model="item.size"/></td>
+                                            <td><input name="qty" id="qty" type="text" class="form-control" ng-model="item.qty"/></td>
+                                            <td><input name="description" id="description" type="text" class="form-control" ng-model="item.description"/></td>
+                                            <td><input name="unitPrice" id="unitPrice" type="text" class="form-control" ng-model="item.unitPrice"/></td>
+                                            <td><input name="totalPrice" id="totalPrice" type="text" class="form-control" ng-model="item.totalPrice"/></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
                 <!--BUTTONS FOR CONTROL-->
                 <div style="margin-top:10px;">
                     <button ng-click="vm.cancel()" class="btn btn-default">Cancel</button>
