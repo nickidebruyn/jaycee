@@ -126,11 +126,13 @@
 
     function addDocRow(doc, item, count) {
 
-      var spacing = 20;
+      var spacing = 8;
 
       doc.setTextColor(0);
-      doc.setFontSize(12);
+      doc.setFontSize(10);
       doc.text(10, 30 + (count * spacing), item.name);
+
+      doc.text(30, 30 + (count * spacing), item.unitPrice);
 
     }
 
