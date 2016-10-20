@@ -127,6 +127,8 @@
       addVatTotalsFooter(doc);
       addTotalsFooter(doc);
 
+
+
       doc.save('Quote.pdf');
 
 
@@ -142,12 +144,12 @@
       doc.setFontSize(10);
       doc.text(10, posY , "WINDOW");
       doc.text(50, posY , "SIZE (B X H)");
-      doc.text(80, posY , "QTY");
+      doc.text(70, posY , "QTY");
       doc.text(90, posY , "DESCRIPTION");
-      doc.text(150, posY , "UNIT PRICE");
-      doc.text(180, posY , "TOTAL PRICE");
+      doc.text(140, posY , "UNIT PRICE");
+      doc.text(170, posY , "TOTAL PRICE");
 
-      doc.line(10, posY, 200, posY);
+      doc.line(10, posY+1, 200, posY+1);
 
     }
 
@@ -160,10 +162,10 @@
       doc.setFontSize(8);
       doc.text(10, posY + (count * spacing), item.name);
       doc.text(50, posY + (count * spacing), item.size);
-      doc.text(80, posY + (count * spacing), item.qty + "");
+      doc.text(70, posY + (count * spacing), item.qty + "");
       doc.text(90, posY + (count * spacing), item.description);
-      doc.text(150, posY + (count * spacing), item.unitPrice + "");
-      doc.text(180, posY + (count * spacing), getItemTotalPrice(item) + "");
+      doc.text(140, posY + (count * spacing), item.unitPrice + "");
+      doc.text(170, posY + (count * spacing), getItemTotalPrice(item) + "");
 
     }
 
@@ -174,10 +176,10 @@
 
       doc.setTextColor(0);
       doc.setFontSize(11);
-      doc.text(150, posY , "SUB TOTAL");
-      doc.text(180, posY , "" + getSubTotal());
+      doc.text(140, posY , "SUB TOTAL");
+      doc.text(170, posY , "" + getSubTotal());
 
-      doc.line(10, posY, 200, posY);
+      doc.line(10, posY-7, 200, posY-7);
 
     }
 
@@ -188,8 +190,8 @@
 
       doc.setTextColor(0);
       doc.setFontSize(11);
-      doc.text(150, posY , "VAT");
-      doc.text(180, posY , "" + getVatTotal());
+      doc.text(140, posY , "VAT");
+      doc.text(170, posY , "" + getVatTotal());
 
     }
 
@@ -200,8 +202,10 @@
 
       doc.setTextColor(0);
       doc.setFontSize(11);
-      doc.text(150, posY , "TOTAL");
-      doc.text(180, posY , "" + getTotal());
+      doc.text(140, posY , "TOTAL");
+      doc.text(170, posY , "" + getTotal());
+
+      doc.rect(10, 35, 200, posY + 2);
 
     }
 
