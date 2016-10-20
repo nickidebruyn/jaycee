@@ -179,7 +179,7 @@
       doc.text(140, posY , "SUB TOTAL");
       doc.text(170, posY , "" + getSubTotal());
 
-      doc.line(10, posY-7, 200, posY-7);
+      doc.line(10, posY-5, 200, posY-5);
 
     }
 
@@ -205,7 +205,7 @@
       doc.text(140, posY , "TOTAL");
       doc.text(170, posY , "" + getTotal());
 
-      doc.rect(10, 35, 200, posY + 2);
+      doc.rect(10, 29, 100, posY + 2);
 
     }
 
