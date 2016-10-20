@@ -59,6 +59,8 @@
 
       console.log("Quote successfully saved: ", vm.quote);
 
+      $location.path( "/");
+
     }
 
     function add() {
