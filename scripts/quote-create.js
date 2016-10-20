@@ -147,7 +147,7 @@
       doc.text(150, posY , "UNIT PRICE");
       doc.text(180, posY , "TOTAL PRICE");
 
-      doc.line(10, posY-8, 210, posY-8);
+      doc.line(10, posY-1, 210, posY-1);
 
     }
 
@@ -177,7 +177,7 @@
       doc.text(150, posY , "SUB TOTAL");
       doc.text(180, posY , "" + getSubTotal());
 
-      doc.line(10, posY-8, 210, posY-8);
+      doc.line(10, posY-1, 210, posY-1);
 
     }
 
