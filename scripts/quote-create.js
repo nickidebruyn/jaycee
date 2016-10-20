@@ -15,8 +15,8 @@
     });
   }
 
-  QuoteCreateController.$inject = ['$location','$routeParams'];
-  function QuoteCreateController ($location, $routeParams) {
+  QuoteCreateController.$inject = ['$location','$routeParams', 'validationUtils'];
+  function QuoteCreateController ($location, $routeParams, validationUtils) {
 
     /* jshint validthis: true */
     var vm = this;
@@ -42,7 +42,7 @@
     }
 
     function save() {
-      // validationUtils.setDirty(vm.form);
+      validationUtils.setDirty(vm.form);
 
       if (!vm.form.$valid) {
         return;
