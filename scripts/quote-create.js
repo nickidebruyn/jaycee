@@ -25,12 +25,12 @@
     vm.save = save;
 
     vm.quote = {
-      clientName: "Test client",
-      clientAddress: "Test client",
-      clientTel: 1223424,
-      clientCell: 1223424,
-      clientFax: 1223424,
-      clientContact: "bla bla",
+      clientName: "",
+      clientAddress: "",
+      clientTel: null,
+      clientCell: null,
+      clientFax: null,
+      clientContact: "",
       clientDetails: ""
 
 
