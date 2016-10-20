@@ -111,9 +111,9 @@
                     </div>
 
                     <div class="panel-body">
-                        <div class="row">
+                        <div class="row" style="padding-bottom: 5px;">
                             <div class="col-md-12">
-                                <button ng-click="vm.add()" class="btn btn-default">Add Item</button>
+                                <button ng-click="vm.add()" class="btn btn-success">Add Item</button>
                             </div>
                         </div>
                         <div class="row">
@@ -135,7 +135,7 @@
                                         <tr ng-repeat="item in vm.quote.items">
                                             <td><input name="name" id="name" type="text" class="form-control" ng-model="item.name"/></td>
                                             <td><input name="size" id="size" type="text" class="form-control" ng-model="item.size"/></td>
-                                            <td><input name="qty" id="qty" type="text" class="form-control" ng-model="item.qty"/></td>
+                                            <td><input name="qty" id="qty" type="text" class="form-control" ng-model="item.qty" required smartFloat min="0" max="999"/></td>
                                             <td><input name="description" id="description" type="text" class="form-control" ng-model="item.description"/></td>
                                             <td><input name="unitPrice" id="unitPrice" type="text" class="form-control" ng-model="item.unitPrice"/></td>
                                             <td><input name="totalPrice" id="totalPrice" type="text" class="form-control" ng-model="(item.unitPrice*item.qty)"/></td>
