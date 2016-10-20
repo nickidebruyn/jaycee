@@ -153,8 +153,8 @@
       doc.text(50, 60 + (count * spacing), item.size);
       doc.text(80, 60 + (count * spacing), item.qty + "");
       doc.text(90, 60 + (count * spacing), item.description);
-      doc.text(150, 60 + (count * spacing), item.unitPrice);
-      doc.text(180, 60 + (count * spacing), getItemTotalPrice(item));
+      doc.text(150, 60 + (count * spacing), item.unitPrice + "");
+      doc.text(180, 60 + (count * spacing), getItemTotalPrice(item) + "");
 
     }
 
