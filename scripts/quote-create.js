@@ -71,11 +71,15 @@
     function getVatTotal() {
       var total = 0;
 
+      total = getSubTotal() * 0.14;
+
       return total;
     }
 
     function getTotal() {
       var total = 0;
+
+      total = getSubTotal() + getVatTotal();
 
       return total;
     }
