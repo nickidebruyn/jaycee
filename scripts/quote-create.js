@@ -27,6 +27,8 @@
     vm.remove = remove;
     vm.getItemTotalPrice = getItemTotalPrice;
     vm.getSubTotal = getSubTotal;
+    vm.getVatTotal = getVatTotal;
+    vm.getTotal = getTotal;
 
     vm.quote = {
       clientName: "",
@@ -104,7 +106,7 @@
 
       // I know the proper spelling is colour ;)
       doc.setTextColor(0);
-      doc.text(40, 20, 'EXCEPTIONAL SERVICE SINCE 1979');
+      doc.text(100, 20, 'EXCEPTIONAL SERVICE SINCE 1979');
 
       doc.save('Quote.pdf');
 
