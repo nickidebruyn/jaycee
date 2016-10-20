@@ -104,7 +104,11 @@
       //Generate the js pdf
       var doc = new jsPDF();
 
-      // I know the proper spelling is colour ;)
+      doc.setTextColor(10, 10, 200);
+      doc.setFontSize(22);
+      doc.text(10, 20, 'JayCee Quote');
+
+      doc.setFontSize(16);
       doc.setTextColor(0);
       doc.text(100, 20, 'EXCEPTIONAL SERVICE SINCE 1979');
 
