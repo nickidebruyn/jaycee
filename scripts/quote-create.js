@@ -112,7 +112,7 @@
       doc.setTextColor(0);
       doc.text(100, 20, 'EXCEPTIONAL SERVICE SINCE 1979');
 
-      addDocHeader();
+      addDocHeader(doc);
 
       for (var i = 0; i < vm.quote.items.length; i++) {
         var item = vm.quote.items[i];
@@ -126,7 +126,7 @@
 
     }
 
-    function addDocHeader() {
+    function addDocHeader(doc) {
 
       var spacing = 8;
 
