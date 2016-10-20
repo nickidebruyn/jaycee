@@ -205,7 +205,7 @@
       doc.text(140, posY , "TOTAL");
       doc.text(170, posY , "" + getTotal());
 
-      doc.rect(10, 30, 190, posY);
+      doc.rect(10, 30, 190, posY-20);
 
     }
 
