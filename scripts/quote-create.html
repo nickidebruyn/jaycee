@@ -19,23 +19,49 @@
                     <div class="panel-heading">
                         <h3 class="panel-title">Client Details</h3>
                     </div>
-                </div>
 
-                <div class="panel-body">
+                    <div class="panel-body">
 
-                    <!--Name-->
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group" ng-class="{ 'has-error': vm.form.clientName.$invalid && vm.form.clientName.$dirty }">                        
-                                <label for="clientName" class="control-label">Name <span class="required">*</span></label>
-                                <input id="clientName" name="clientName" type="text"  class="form-control" placeholder="" ng-model="vm.quote.clientName" required>
+                        <!--Address-->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group" ng-class="{ 'has-error': vm.form.clientAddress.$invalid && vm.form.clientAddress.$dirty }">
+                                    <label for="clientAddress" class="control-label">Address <span class="required">*</span></label>
+                                    <input id="clientAddress" name="clientAddress" type="text"  class="form-control" placeholder="" ng-model="vm.quote.clientAddress" required>
 
-                                <div ng-messages="vm.form.clientName.$error" ng-if='vm.form.clientName.$dirty' class="error-messages" role="alert">
-                                    <div ng-message="required" class="error-message">This field is required</div>
+                                    <div ng-messages="vm.form.clientAddress.$error" ng-if='vm.form.clientAddress.$dirty' class="error-messages" role="alert">
+                                        <div ng-message="required" class="error-message">This field is required</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!--Name-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group" ng-class="{ 'has-error': vm.form.clientName.$invalid && vm.form.clientName.$dirty }">                        
+                                    <label for="clientName" class="control-label">Name <span class="required">*</span></label>
+                                    <input id="clientName" name="clientName" type="text"  class="form-control" placeholder="" ng-model="vm.quote.clientName" required>
+
+                                    <div ng-messages="vm.form.clientName.$error" ng-if='vm.form.clientName.$dirty' class="error-messages" role="alert">
+                                        <div ng-message="required" class="error-message">This field is required</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group" ng-class="{ 'has-error': vm.form.clientContact.$invalid && vm.form.clientContact.$dirty }">
+                                    <label for="clientContact" class="control-label">Contact <span class="required">*</span></label>
+                                    <input id="clientContact" name="clientContact" type="text"  class="form-control" placeholder="" ng-model="vm.quote.clientContact" required>
+
+                                    <div ng-messages="vm.form.clientContact.$error" ng-if='vm.form.clientContact.$dirty' class="error-messages" role="alert">
+                                        <div ng-message="required" class="error-message">This field is required</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
+
                 </div>
 
             </form>
@@ -44,5 +70,5 @@
         </div>
 
     </div>
-    
+
 </div>
