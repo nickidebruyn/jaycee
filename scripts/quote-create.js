@@ -78,7 +78,11 @@
 
     function remove(item) {
       console.log("Remove item from quote ", item);
-      vm.quote.items.remove(item);
+      if (vm.quote.items.length > 1) {
+        var index = vm.quote.items.indexOf(item);
+        vm.quote.items.splice(index, 1);
+      }
+
     }
 
   }
