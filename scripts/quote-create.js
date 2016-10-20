@@ -48,6 +48,7 @@
         return;
       }
 
+      console.log("Quote successfully saved: ", vm.quote);
 
     }
 
