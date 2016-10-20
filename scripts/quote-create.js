@@ -24,6 +24,7 @@
     vm.cancel = cancel;
     vm.save = save;
     vm.add = add;
+    vm.remove = remove;
 
     vm.quote = {
       clientName: "",
@@ -71,8 +72,13 @@
         unitPrice: 0
       };
 
-      vm.quote.push(item);
+      vm.quote.items.push(item);
 
+    }
+
+    function remove(item) {
+      console.log("Remove item from quote ", item);
+      vm.quote.items.remove(item);
     }
 
   }
