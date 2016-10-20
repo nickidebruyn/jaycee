@@ -21,8 +21,12 @@
     /* jshint validthis: true */
     var vm = this;
 
+    vm.cancel = cancel;
+    vm.save = save;
+
     vm.quote = {
       clientName: "Test client",
+      clientAddress: "Test client",
       clientTel: 1223424,
       clientCell: 1223424,
       clientFax: 1223424,
@@ -32,6 +36,20 @@
 
     }
 
+
+    function cancel() {
+      $location.path( "/");
+    }
+
+    function save() {
+      // validationUtils.setDirty(vm.form);
+
+      if (!vm.form.$valid) {
+        return;
+      }
+
+
+    }
 
   }
 

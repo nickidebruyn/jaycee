@@ -60,8 +60,53 @@
                             </div>
 
                         </div>
+
+                        <!--Phone-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group" ng-class="{ 'has-error': vm.form.clientCell.$invalid && vm.form.clientCell.$dirty }">                        
+                                    <label for="clientCell" class="control-label">Cell <span class="required">*</span></label>
+                                    <input id="clientCell" name="clientCell" type="text"  class="form-control" placeholder="" ng-model="vm.quote.clientCell" required>
+
+                                    <div ng-messages="vm.form.clientCell.$error" ng-if='vm.form.clientCell.$dirty' class="error-messages" role="alert">
+                                        <div ng-message="required" class="error-message">This field is required</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group" ng-class="{ 'has-error': vm.form.clientFax.$invalid && vm.form.clientFax.$dirty }">
+                                    <label for="clientFax" class="control-label">Fax <span class="required">*</span></label>
+                                    <input id="clientFax" name="clientFax" type="text"  class="form-control" placeholder="" ng-model="vm.quote.clientFax" required>
+
+                                    <div ng-messages="vm.form.clientFax.$error" ng-if='vm.form.clientFax.$dirty' class="error-messages" role="alert">
+                                        <div ng-message="required" class="error-message">This field is required</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!--Detail-->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="clientDetails" class="control-label">Details</label>
+                                    <input id="clientDetails" name="clientDetails" type="text"  class="form-control" placeholder="" ng-model="vm.quote.clientDetails">
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
 
+                </div>
+
+
+                <!--BUTTONS FOR CONTROL-->
+                <div style="margin-top:10px;">
+                    <button ng-click="vm.cancel()" class="btn btn-default">Cancel</button>
+                    <button ng-click="vm.save()" class="btn btn-primary">Save</button>
                 </div>
 
             </form>
