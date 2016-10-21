@@ -175,8 +175,8 @@
       doc.text(50, posY + (count * spacing), item.size);
       doc.text(75, posY + (count * spacing), item.qty + "");
       doc.text(90, posY + (count * spacing), item.description);
-      doc.text(140, posY + (count * spacing), "R " + item.unitPrice);
-      doc.text(170, posY + (count * spacing), "R " + getItemTotalPrice(item));
+      doc.text(140, posY + (count * spacing), "R " + item.unitPrice.toFixed(2));
+      doc.text(170, posY + (count * spacing), "R " + getItemTotalPrice(item).toFixed(2));
 
     }
 
@@ -188,7 +188,7 @@
       doc.setFontSize(11);
       doc.setFontType("bold");
       doc.text(140, posY , "SUB TOTAL");
-      doc.text(170, posY , "R " + getSubTotal());
+      doc.text(170, posY , "R " + getSubTotal().toFixed(2));
 
       doc.line(10, posY-5, 200, posY-5);
 
@@ -202,7 +202,7 @@
       doc.setFontSize(11);
       doc.setFontType("bold");
       doc.text(140, posY , "VAT");
-      doc.text(170, posY , "R " + getVatTotal());
+      doc.text(170, posY , "R " + getVatTotal().toFixed(2));
 
     }
 
@@ -214,7 +214,7 @@
       doc.setFontSize(11);
       doc.setFontType("bold");
       doc.text(140, posY , "TOTAL");
-      doc.text(170, posY , "R " + getTotal());
+      doc.text(170, posY , "R " + getTotal().toFixed(2));
 
     }
 
