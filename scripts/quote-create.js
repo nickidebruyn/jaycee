@@ -108,14 +108,15 @@
 
       doc.addImage(imgData, 'JPEG', 10, 8, 52, 13);
 
-      // doc.setTextColor(10, 10, 200);
-      // doc.setFontSize(22);
-      // doc.text(10, 20, 'JayCee Quote');
+      doc.setTextColor(0);
+      doc.setFontSize(16);
+      doc.setFontType("bold");
+      doc.text(10, 30, 'TEL: 012 800 11 69/8  FAX: 012 800 1772');
 
       doc.setFontSize(16);
       doc.setTextColor(0);
       doc.setFontType("bold");
-      doc.text(100, 20, 'EXCEPTIONAL SERVICE SINCE 1979');
+      doc.text(100, 20, 'EXCEPTIONAL SERVICE \nSINCE 1979');
 
       addDocHeader(doc);
 
@@ -167,8 +168,8 @@
       doc.text(50, posY + (count * spacing), item.size);
       doc.text(75, posY + (count * spacing), item.qty + "");
       doc.text(90, posY + (count * spacing), item.description);
-      doc.text(140, posY + (count * spacing), item.unitPrice + "");
-      doc.text(170, posY + (count * spacing), getItemTotalPrice(item) + "");
+      doc.text(140, posY + (count * spacing), "R " + item.unitPrice);
+      doc.text(170, posY + (count * spacing), "R " + getItemTotalPrice(item));
 
     }
 
@@ -181,7 +182,7 @@
       doc.setFontSize(11);
       doc.setFontType("bold");
       doc.text(140, posY , "SUB TOTAL");
-      doc.text(170, posY , "" + getSubTotal());
+      doc.text(170, posY , "R " + getSubTotal());
 
       doc.line(10, posY-5, 200, posY-5);
 
@@ -196,7 +197,7 @@
       doc.setFontSize(11);
       doc.setFontType("bold");
       doc.text(140, posY , "VAT");
-      doc.text(170, posY , "" + getVatTotal());
+      doc.text(170, posY , "R " + getVatTotal());
 
     }
 
@@ -209,7 +210,7 @@
       doc.setFontSize(11);
       doc.setFontType("bold");
       doc.text(140, posY , "TOTAL");
-      doc.text(170, posY , "" + getTotal());
+      doc.text(170, posY , "R " + getTotal());
 
       doc.rect(10, 30, 190, posY-26);
 
