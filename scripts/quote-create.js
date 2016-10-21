@@ -114,6 +114,7 @@
 
       doc.setFontSize(16);
       doc.setTextColor(0);
+      doc.setFontType("bold");
       doc.text(100, 20, 'EXCEPTIONAL SERVICE SINCE 1979');
 
       addDocHeader(doc);
@@ -142,6 +143,7 @@
 
       doc.setTextColor(0);
       doc.setFontSize(10);
+      doc.setFontType("bold");
       doc.text(12, posY , "WINDOW");
       doc.text(50, posY , "SIZE (B X H)");
       doc.text(75, posY , "QTY");
@@ -160,6 +162,7 @@
 
       doc.setTextColor(0);
       doc.setFontSize(8);
+      doc.setFontType("helvetica");
       doc.text(12, posY + (count * spacing), item.name);
       doc.text(50, posY + (count * spacing), item.size);
       doc.text(75, posY + (count * spacing), item.qty + "");
@@ -176,6 +179,7 @@
 
       doc.setTextColor(0);
       doc.setFontSize(11);
+      doc.setFontType("bold");
       doc.text(140, posY , "SUB TOTAL");
       doc.text(170, posY , "" + getSubTotal());
 
@@ -190,6 +194,7 @@
 
       doc.setTextColor(0);
       doc.setFontSize(11);
+      doc.setFontType("bold");
       doc.text(140, posY , "VAT");
       doc.text(170, posY , "" + getVatTotal());
 
@@ -202,6 +207,7 @@
 
       doc.setTextColor(0);
       doc.setFontSize(11);
+      doc.setFontType("bold");
       doc.text(140, posY , "TOTAL");
       doc.text(170, posY , "" + getTotal());
 
