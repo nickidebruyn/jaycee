@@ -110,7 +110,7 @@
 
 
       addDocumentHeader(doc, 10);
-      addClientDetails(doc, 30);
+      addClientDetails(doc, 31);
       addQuoteTable(doc, 60);
 
       doc.save('Quote.pdf');
@@ -135,11 +135,19 @@
       doc.setFontType("bold");
       doc.text(120, startY + 10, 'EXCEPTIONAL SERVICE \n     SINCE 1979');      
 
+      doc.line(10, startY + 20, 200, startY + 20);
+
+      doc.setTextColor(0);
+      doc.setFontSize(10);
+      doc.setFontType("helvetica");
+      doc.text(10, startY + 25, 'CC/BK 88/11665/23  VAT/BTW 4320107081');
+      
+
     }
 
     function addClientDetails(doc, startY) {
 
-      doc.line(10, startY+1, 200, startY+1);
+      doc.line(10, startY, 200, startY);
 
     }
 
