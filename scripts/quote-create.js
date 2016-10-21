@@ -130,11 +130,6 @@
       doc.setFontType("bold");
       doc.text(10, startY + 20, 'TEL: 012 800 11 69/8  FAX: 012 800 1772');
 
-      doc.setTextColor(0);
-      doc.setFontSize(8);
-      doc.setFontType("bold");
-      doc.text(160, startY + 20, 'QUOTE NR: ' + vm.quote.id);
-
       doc.setFontSize(16);
       doc.setTextColor(0);
       doc.setFontType("bold");
@@ -146,7 +141,11 @@
       doc.setFontSize(8);
       doc.setFontType("helvetica");
       doc.text(10, startY + 24, 'CC/BK 88/11665/23  VAT/BTW 4320107081');
-      
+
+      doc.setTextColor(0);
+      doc.setFontSize(8);
+      doc.setFontType("bold");
+      doc.text(170, startY + 24, 'QUOTE NR: ' + vm.quote.id);      
 
     }
 
