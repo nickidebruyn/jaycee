@@ -139,7 +139,7 @@
 
     function addClientDetails(doc, startY) {
 
-      doc.line(10, startY, 200, startY);
+      doc.line(10, startY+1, 200, startY+1);
 
     }
 
@@ -147,7 +147,7 @@
 
       var spacing = 6;
 
-      addDocHeader(doc, startY);
+      addTableHeader(doc, startY);
 
       for (var i = 0; i < vm.quote.items.length; i++) {
         var item = vm.quote.items[i];
@@ -158,11 +158,11 @@
       addVatTotalsFooter(doc, startY + 16, spacing);
       addTotalsFooter(doc, startY + 22, spacing);
 
-      doc.rect(10, startY-5, 190, startY + (vm.quote.items.length * spacing)-20);
+      doc.rect(10, startY-5, 190, startY + (vm.quote.items.length * spacing)-30);
 
     }
 
-    function addDocHeader(doc, startY) {
+    function addTableHeader(doc, startY) {
 
       var posY = startY;
 
