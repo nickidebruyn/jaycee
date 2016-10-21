@@ -142,7 +142,7 @@
       addVatTotalsFooter(doc, startY + 16, spacing);
       addTotalsFooter(doc, startY + 22, spacing);
 
-      doc.rect(10, 30, 190, startY + (vm.quote.items.length * spacing));
+      doc.rect(10, startY-5, 190, startY + (vm.quote.items.length * spacing));
 
     }
 
