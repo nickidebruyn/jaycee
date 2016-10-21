@@ -129,16 +129,18 @@
 
     function addQuoteTable(doc, startY) {
 
+      var spacing = 6;
+
       addDocHeader(doc, startY);
 
       for (var i = 0; i < vm.quote.items.length; i++) {
         var item = vm.quote.items[i];
-        addDocRow(doc, item, i, startY + 5);
+        addDocRow(doc, item, i, startY + 5, spacing);
       };
 
-      addSubTotalsFooter(doc, startY + 10);
-      addVatTotalsFooter(doc, startY + 16);
-      addTotalsFooter(doc, startY + 22);
+      addSubTotalsFooter(doc, startY + 10, spacing);
+      addVatTotalsFooter(doc, startY + 16, spacing);
+      addTotalsFooter(doc, startY + 22, spacing);
 
       doc.rect(10, 30, 190, startY + (vm.quote.items.length * spacing));
 
@@ -162,9 +164,8 @@
 
     }
 
-    function addDocRow(doc, item, count, startY) {
+    function addDocRow(doc, item, count, startY, spacing) {
 
-      var spacing = 6;
       var posY = startY;
 
       doc.setTextColor(0);
@@ -179,9 +180,8 @@
 
     }
 
-    function addSubTotalsFooter(doc, startY) {
+    function addSubTotalsFooter(doc, startY, spacing) {
 
-      var spacing = 6;
       var posY = startY + (vm.quote.items.length * spacing);
 
       doc.setTextColor(0);
@@ -194,9 +194,8 @@
 
     }
 
-    function addVatTotalsFooter(doc, startY) {
+    function addVatTotalsFooter(doc, startY, spacing) {
 
-      var spacing = 6;
       var posY = startY + (vm.quote.items.length * spacing);
 
       doc.setTextColor(0);
@@ -207,9 +206,8 @@
 
     }
 
-    function addTotalsFooter(doc, startY) {
+    function addTotalsFooter(doc, startY, spacing) {
 
-      var spacing = 6;
       var posY = startY + (vm.quote.items.length * spacing);
 
       doc.setTextColor(0);
