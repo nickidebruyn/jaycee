@@ -56,7 +56,7 @@
       if (item.unitPrice != undefined && item.qty != undefined) {
         total = item.unitPrice*item.qty;
       }
-      return total;
+      return total.toFixed(2);
     }
 
     function getSubTotal() {
