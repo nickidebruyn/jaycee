@@ -109,7 +109,7 @@
       doc.addImage(imgData, 'JPEG', 10, 8, 52, 13);
 
       doc.setTextColor(0);
-      doc.setFontSize(16);
+      doc.setFontSize(12);
       doc.setFontType("bold");
       doc.text(10, 30, 'TEL: 012 800 11 69/8  FAX: 012 800 1772');
 
@@ -118,18 +118,7 @@
       doc.setFontType("bold");
       doc.text(100, 20, 'EXCEPTIONAL SERVICE \nSINCE 1979');
 
-      addDocHeader(doc);
-
-      for (var i = 0; i < vm.quote.items.length; i++) {
-        var item = vm.quote.items[i];
-        addDocRow(doc, item, i);
-      };
-
-      addSubTotalsFooter(doc);
-      addVatTotalsFooter(doc);
-      addTotalsFooter(doc);
-
-
+      addQuoteTable(doc, 35);
 
       doc.save('Quote.pdf');
 
@@ -138,9 +127,25 @@
 
     }
 
-    function addDocHeader(doc) {
+    function addQuoteTable(doc, startY) {
 
-      var posY = 35;
+      addDocHeader(doc, startY);
+
+      for (var i = 0; i < vm.quote.items.length; i++) {
+        var item = vm.quote.items[i];
+        addDocRow(doc, item, i, startY + 5);
+      };
+
+      addSubTotalsFooter(doc, startY + 10);
+      addVatTotalsFooter(doc, startY + 16);
+      addTotalsFooter(doc, startY + 22);
+
+
+    }
+
+    function addDocHeader(doc, startY) {
+
+      var posY = startY;
 
       doc.setTextColor(0);
       doc.setFontSize(10);
@@ -156,10 +161,10 @@
 
     }
 
-    function addDocRow(doc, item, count) {
+    function addDocRow(doc, item, count, startY) {
 
       var spacing = 6;
-      var posY = 40;
+      var posY = startY;
 
       doc.setTextColor(0);
       doc.setFontSize(8);
@@ -173,10 +178,10 @@
 
     }
 
-    function addSubTotalsFooter(doc) {
+    function addSubTotalsFooter(doc, startY) {
 
       var spacing = 6;
-      var posY = 40 + (vm.quote.items.length * spacing);
+      var posY = startY + (vm.quote.items.length * spacing);
 
       doc.setTextColor(0);
       doc.setFontSize(11);
@@ -188,10 +193,10 @@
 
     }
 
-    function addVatTotalsFooter(doc) {
+    function addVatTotalsFooter(doc, startY) {
 
       var spacing = 6;
-      var posY = 46 + (vm.quote.items.length * spacing);
+      var posY = startY + (vm.quote.items.length * spacing);
 
       doc.setTextColor(0);
       doc.setFontSize(11);
@@ -201,10 +206,10 @@
 
     }
 
-    function addTotalsFooter(doc) {
+    function addTotalsFooter(doc, startY) {
 
       var spacing = 6;
-      var posY = 52 + (vm.quote.items.length * spacing);
+      var posY = startY + (vm.quote.items.length * spacing);
 
       doc.setTextColor(0);
       doc.setFontSize(11);
