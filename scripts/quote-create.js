@@ -48,8 +48,9 @@
       }
       ]
 
-      console.log("New Quote: ", vm.quote);
-    }
+    };
+
+    console.log("New Quote: ", vm.quote);
 
     function getItemTotalPrice(item) {
       // console.log("getItemTotals() ", item);
