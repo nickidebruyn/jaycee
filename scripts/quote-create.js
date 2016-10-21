@@ -118,7 +118,7 @@
       doc.setFontType("bold");
       doc.text(100, 20, 'EXCEPTIONAL SERVICE \nSINCE 1979');
 
-      addQuoteTable(doc, 35);
+      addQuoteTable(doc, 45);
 
       doc.save('Quote.pdf');
 
