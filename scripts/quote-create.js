@@ -110,7 +110,7 @@
 
 
       addDocumentHeader(doc, 10);
-      addClientDetails(doc, 36);
+      addClientDetails(doc, 35);
       addQuoteTable(doc, 60);
 
       doc.save('Quote.pdf');
@@ -129,6 +129,11 @@
       doc.setFontSize(10);
       doc.setFontType("bold");
       doc.text(10, startY + 20, 'TEL: 012 800 11 69/8  FAX: 012 800 1772');
+
+      doc.setTextColor(0);
+      doc.setFontSize(8);
+      doc.setFontType("bold");
+      doc.text(160, startY + 20, 'QUOTE NR: ' + vm.quote.id);
 
       doc.setFontSize(16);
       doc.setTextColor(0);
