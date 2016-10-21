@@ -140,6 +140,7 @@
       addVatTotalsFooter(doc, startY + 16);
       addTotalsFooter(doc, startY + 22);
 
+      doc.rect(10, 30, 190, startY + (vm.quote.items.length * spacing));
 
     }
 
@@ -216,8 +217,6 @@
       doc.setFontType("bold");
       doc.text(140, posY , "TOTAL");
       doc.text(170, posY , "R " + getTotal());
-
-      doc.rect(10, 30, 190, posY-26);
 
     }
 
