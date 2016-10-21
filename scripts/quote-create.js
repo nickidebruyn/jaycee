@@ -31,6 +31,7 @@
     vm.getTotal = getTotal;
 
     vm.quote = {
+      id: Math.floor((Math.random() * 10000) + 1),
       clientName: "xxxxxxx",
       clientAddress: "xxxx",
       clientTel: 2222222,
@@ -47,6 +48,7 @@
       }
       ]
 
+      console.log("New Quote: " + vm.quote);
     }
 
     function getItemTotalPrice(item) {
@@ -107,7 +109,7 @@
 
 
       addDocumentHeader(doc, 10);
-      addClientDetails(doc, 35);
+      addClientDetails(doc, 30);
       addQuoteTable(doc, 60);
 
       doc.save('Quote.pdf');
@@ -155,7 +157,7 @@
       addVatTotalsFooter(doc, startY + 16, spacing);
       addTotalsFooter(doc, startY + 22, spacing);
 
-      doc.rect(10, startY-5, 190, startY + (vm.quote.items.length * spacing)-10);
+      doc.rect(10, startY-5, 190, startY + (vm.quote.items.length * spacing)-20);
 
     }
 
