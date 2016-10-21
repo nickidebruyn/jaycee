@@ -107,7 +107,7 @@
 
 
       addDocumentHeader(doc, 10);
-      addClientDetails(doc, 40);
+      addClientDetails(doc, 35);
       addQuoteTable(doc, 60);
 
       doc.save('Quote.pdf');
@@ -123,9 +123,9 @@
       doc.addImage(imgData, 'JPEG', 10, startY, 52, 13);
 
       doc.setTextColor(0);
-      doc.setFontSize(12);
+      doc.setFontSize(10);
       doc.setFontType("bold");
-      doc.text(10, startY + 12, 'TEL: 012 800 11 69/8  FAX: 012 800 1772');
+      doc.text(10, startY + 20, 'TEL: 012 800 11 69/8  FAX: 012 800 1772');
 
       doc.setFontSize(16);
       doc.setTextColor(0);
@@ -155,7 +155,7 @@
       addVatTotalsFooter(doc, startY + 16, spacing);
       addTotalsFooter(doc, startY + 22, spacing);
 
-      doc.rect(10, startY-5, 190, startY + (vm.quote.items.length * spacing));
+      doc.rect(10, startY-5, 190, startY + (vm.quote.items.length * spacing)-10);
 
     }
 
