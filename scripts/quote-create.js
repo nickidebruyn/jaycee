@@ -165,7 +165,7 @@
       doc.text(10, startY + 24, 'CONTACT:');
       doc.text(10, startY + 28, 'DETAIL:');
 
-      doc.text(150, startY + 4, 'DATE:');
+      doc.text(140, startY + 4, 'DATE:');
 
       doc.setFontType("helvetica");
       doc.text(40, startY + 4, vm.quote.clientAddress);
@@ -176,9 +176,11 @@
       doc.text(40, startY + 24, vm.quote.clientContact);
       doc.text(40, startY + 28, vm.quote.clientDetails);
 
-      doc.text(160, startY + 4, "" + new Date());
 
+      var today = new Date();
+      today.toISOString().substring(0, 10);
 
+      doc.text(150, startY + 4, "" + today);
 
     }
 
