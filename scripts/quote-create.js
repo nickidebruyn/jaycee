@@ -153,6 +153,15 @@
 
       doc.line(10, startY, 200, startY);
 
+      doc.setTextColor(0);
+      doc.setFontSize(8);
+      doc.setFontType("bold");
+      doc.text(10, startY + 5, 'ADDRESS:');
+      doc.text(10, startY + 10, 'CLIENT:');
+      doc.text(10, startY + 15, 'TEL:');
+
+
+
     }
 
     function addQuoteTable(doc, startY) {
