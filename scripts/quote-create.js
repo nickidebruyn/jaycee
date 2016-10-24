@@ -111,9 +111,9 @@
 
       addDocumentHeader(doc, 10);
       addClientDetails(doc, 35);
-      addQuoteTable(doc, 60);
+      addQuoteTable(doc, 70);
 
-      doc.save('Quote.pdf');
+      doc.save('Quote-' + vm.quote.id + '.pdf');
 
 
       $location.path( "/");
@@ -156,9 +156,13 @@
       doc.setTextColor(0);
       doc.setFontSize(8);
       doc.setFontType("bold");
-      doc.text(10, startY + 5, 'ADDRESS:');
-      doc.text(10, startY + 10, 'CLIENT:');
-      doc.text(10, startY + 15, 'TEL:');
+      doc.text(10, startY + 4, 'ADDRESS:');
+      doc.text(10, startY + 8, 'CLIENT:');
+      doc.text(10, startY + 12, 'TEL:');
+      doc.text(10, startY + 16, 'FAX:');
+      doc.text(10, startY + 20, 'CELL:');
+      doc.text(10, startY + 24, 'CONTACT:');
+      doc.text(10, startY + 28, 'DETAIL:');
 
 
 
