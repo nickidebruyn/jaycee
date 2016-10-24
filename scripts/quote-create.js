@@ -289,9 +289,9 @@
         "JAYCEE GLASS & ALUMINIUM TERMS AND CONDITIONS OF TRADE AVAILABLE UPON REQUEST, AND WILL ONLY BE\n"+
         "VALID ONCE THE DEPOSIT OF 50% HAS BEEN PAID.");
 
-      doc.text(10, startY + 36 , "THANK YOU FOR YOUR MOST VALUED ENQUIRY. ");      
+      doc.text(10, startY + 38 , "THANK YOU FOR YOUR MOST VALUED ENQUIRY. ");      
 
-      doc.text(50, startY + 42 , "(CREDIT CARDS ACCEPTED. 5% will be added if payment is made by credit card.)");      
+      doc.text(50, startY + 46 , "(CREDIT CARDS ACCEPTED. 5% will be added if payment is made by credit card.)");      
 
 
     }
