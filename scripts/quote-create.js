@@ -275,8 +275,19 @@
       doc.setFontSize(8);
       doc.setFontType("bold");
       doc.text(10, startY , "Quote Checked By :_____________________________");
-      doc.text(150, startY , "Quote Accepted:_____________________________");
-      doc.text(150, startY + 6 , "Date:_____________________________");
+      doc.text(140, startY , 
+        "Quote Accepted:___________________");
+      doc.text(140, startY + 6 , 
+        "Date:_____________________________");
+
+      doc.text(10, startY + 12 , "50% ON ACCEPTANCE OF ORDER");
+      doc.text(10, startY + 18 , "40% ON DELIVERY OF FIRST WINDOWS");
+      doc.text(10, startY + 24 , "10% ON COMPLETION DAY");
+
+      doc.text(10, startY + 30 , "THIS QUOTE MAY CHANGE AT ANY TIME WITHOUT PRIOR NOTICE AND IS SUBJECT TO THE STANDARD\n
+        JAYCEE GLASS & ALUMINIUM TERMS AND CONDITIONS OF TRADE AVAILABLE UPON REQUEST, AND WILL ONLY BE\n
+        VALID ONCE THE DEPOSIT OF 50% HAS BEEN PAID.");
+
 
     }
 
