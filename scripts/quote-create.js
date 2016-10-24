@@ -177,10 +177,8 @@
       doc.text(40, startY + 28, vm.quote.clientDetails);
 
 
-      var today = new Date();
-      today.toISOString().substring(0, 10);
-
-      doc.text(150, startY + 4, "" + today);
+      var today = new Date();      
+      doc.text(150, startY + 4, "" + today.toLocaleFormat('%d-%b-%Y'));
 
     }
 
