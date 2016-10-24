@@ -111,7 +111,7 @@
 
       addDocumentHeader(doc, 10);
       addClientDetails(doc, 35);
-      addQuoteTable(doc, 70);
+      addQuoteTable(doc, 72);
 
       doc.save('Quote-' + vm.quote.id + '.pdf');
 
@@ -163,6 +163,15 @@
       doc.text(10, startY + 20, 'CELL:');
       doc.text(10, startY + 24, 'CONTACT:');
       doc.text(10, startY + 28, 'DETAIL:');
+
+      doc.setFontType("helvetica");
+      doc.text(50, startY + 4, vm.quote.clientAddress);
+      doc.text(50, startY + 8, vm.quote.clientName);
+      doc.text(50, startY + 12, '' + vm.quote.clientTel);
+      doc.text(50, startY + 16, '' + vm.quote.clientFax);
+      doc.text(50, startY + 20, '' + vm.quote.clientCell);
+      doc.text(50, startY + 24, vm.quote.clientContact);
+      doc.text(50, startY + 28, vm.quote.clientDetails);
 
 
 
