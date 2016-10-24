@@ -112,7 +112,7 @@
       addDocumentHeader(doc, 10);
       addClientDetails(doc, 35);
       addQuoteTable(doc, 72);
-      addDocumentFooter(doc, 110 + (vm.quote.items.length * 6));
+      addDocumentFooter(doc, 115 + (vm.quote.items.length * 6));
 
       doc.save('Quote-' + vm.quote.id + '.pdf');
 
@@ -193,7 +193,7 @@
       addVatTotalsFooter(doc, startY + 16, spacing);
       addTotalsFooter(doc, startY + 22, spacing);
 
-      doc.rect(10, startY-5, 190, startY + (vm.quote.items.length * spacing)-35);
+      doc.rect(10, startY-5, 190, startY + (vm.quote.items.length * spacing)-40);
 
     }
 
@@ -272,9 +272,11 @@
     function addDocumentFooter(doc, startY) {
 
       doc.setTextColor(0);
-      doc.setFontSize(10);
+      doc.setFontSize(8);
       doc.setFontType("bold");
-      doc.text(8, startY , "Quote Checked By :_____________________________");
+      doc.text(10, startY , "Quote Checked By :_____________________________");
+      doc.text(150, startY , "Quote Accepted:_____________________________");
+      doc.text(150, startY + 6 , "Date:_____________________________");
 
     }
 
