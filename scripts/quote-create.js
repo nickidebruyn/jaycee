@@ -272,21 +272,26 @@
     function addDocumentFooter(doc, startY) {
 
       doc.setTextColor(0);
-      doc.setFontSize(8);
+      doc.setFontSize(10);
       doc.setFontType("bold");
       doc.text(10, startY , "Quote Checked By :_____________________________");
-      doc.text(140, startY , 
+      doc.text(143, startY , 
         "Quote Accepted:___________________");
-      doc.text(140, startY + 6 , 
+      doc.text(143, startY + 6 , 
         "Date:_____________________________");
 
+      doc.setFontSize(8);
       doc.text(10, startY + 12 , "50% ON ACCEPTANCE OF ORDER");
-      doc.text(10, startY + 18 , "40% ON DELIVERY OF FIRST WINDOWS");
-      doc.text(10, startY + 24 , "10% ON COMPLETION DAY");
+      doc.text(10, startY + 16 , "40% ON DELIVERY OF FIRST WINDOWS");
+      doc.text(10, startY + 20 , "10% ON COMPLETION DAY");
 
-      doc.text(10, startY + 30 , "THIS QUOTE MAY CHANGE AT ANY TIME WITHOUT PRIOR NOTICE AND IS SUBJECT TO THE STANDARD\n"+
+      doc.text(10, startY + 26 , "THIS QUOTE MAY CHANGE AT ANY TIME WITHOUT PRIOR NOTICE AND IS SUBJECT TO THE STANDARD\n"+
         "JAYCEE GLASS & ALUMINIUM TERMS AND CONDITIONS OF TRADE AVAILABLE UPON REQUEST, AND WILL ONLY BE\n"+
         "VALID ONCE THE DEPOSIT OF 50% HAS BEEN PAID.");
+
+      doc.text(10, startY + 32 , "THANK YOU FOR YOUR MOST VALUED ENQUIRY. ");      
+
+      doc.text(60, startY + 36 , "(CREDIT CARDS ACCEPTED. 5% will be added if payment is made by credit card.)");      
 
 
     }
