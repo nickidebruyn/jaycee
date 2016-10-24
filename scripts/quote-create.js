@@ -32,19 +32,19 @@
 
     vm.quote = {
       id: Math.floor((Math.random() * 10000) + 1),
-      clientName: "xxxxxxx",
-      clientAddress: "xxxx",
-      clientTel: 2222222,
-      clientCell: 3333333,
-      clientFax: 444444,
-      clientContact: "ffffffffffffffffff",
-      clientDetails: "sdfsdfsdfsdf",
+      clientName: "",
+      clientAddress: "",
+      clientTel: null,
+      clientCell: null,
+      clientFax: null,
+      clientContact: "",
+      clientDetails: "",
       items: [{        
-        name: "window1",
-        size: "222x300",
+        name: "",
+        size: "",
         qty: 1,
-        description: "bla bgasdvsd svsw",
-        unitPrice: 220
+        description: "",
+        unitPrice: 0
       }
       ]
 
