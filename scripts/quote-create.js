@@ -178,7 +178,7 @@
 
 
       var today = new Date();      
-      doc.text(150, startY + 4, "" + today.toLocaleFormat('%d-%b-%Y'));
+      doc.text(150, startY + 4, "" + today.toDateString());
 
     }
 
