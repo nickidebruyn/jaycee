@@ -112,7 +112,7 @@
       addDocumentHeader(doc, 10);
       addClientDetails(doc, 35);
       addQuoteTable(doc, 72);
-      addDocumentFooter(doc, 100 + (vm.quote.items.length * 6));
+      addDocumentFooter(doc, 110 + (vm.quote.items.length * 6));
 
       doc.save('Quote-' + vm.quote.id + '.pdf');
 
@@ -193,7 +193,7 @@
       addVatTotalsFooter(doc, startY + 16, spacing);
       addTotalsFooter(doc, startY + 22, spacing);
 
-      doc.rect(10, startY-5, 190, startY + (vm.quote.items.length * spacing)-30);
+      doc.rect(10, startY-5, 190, startY + (vm.quote.items.length * spacing)-35);
 
     }
 
