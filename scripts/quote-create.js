@@ -112,7 +112,7 @@
       addDocumentHeader(doc, 10);
       addClientDetails(doc, 35);
       addQuoteTable(doc, 72);
-      addDocumentFooter(doc, 72 + (vm.quote.items.length * 6));
+      addDocumentFooter(doc, 100 + (vm.quote.items.length * 6));
 
       doc.save('Quote-' + vm.quote.id + '.pdf');
 
@@ -274,8 +274,8 @@
       doc.setTextColor(0);
       doc.setFontSize(10);
       doc.setFontType("bold");
-      doc.text(10, startY , "Quote Checked By :_____________________________");
-      
+      doc.text(8, startY , "Quote Checked By :_____________________________");
+
     }
 
     function add() {
