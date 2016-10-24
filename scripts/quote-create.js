@@ -112,6 +112,7 @@
       addDocumentHeader(doc, 10);
       addClientDetails(doc, 35);
       addQuoteTable(doc, 72);
+      addDocumentFooter(doc, 72 + (vm.quote.items.length * 6));
 
       doc.save('Quote-' + vm.quote.id + '.pdf');
 
@@ -165,13 +166,13 @@
       doc.text(10, startY + 28, 'DETAIL:');
 
       doc.setFontType("helvetica");
-      doc.text(50, startY + 4, vm.quote.clientAddress);
-      doc.text(50, startY + 8, vm.quote.clientName);
-      doc.text(50, startY + 12, '' + vm.quote.clientTel);
-      doc.text(50, startY + 16, '' + vm.quote.clientFax);
-      doc.text(50, startY + 20, '' + vm.quote.clientCell);
-      doc.text(50, startY + 24, vm.quote.clientContact);
-      doc.text(50, startY + 28, vm.quote.clientDetails);
+      doc.text(40, startY + 4, vm.quote.clientAddress);
+      doc.text(40, startY + 8, vm.quote.clientName);
+      doc.text(40, startY + 12, '' + vm.quote.clientTel);
+      doc.text(40, startY + 16, '' + vm.quote.clientFax);
+      doc.text(40, startY + 20, '' + vm.quote.clientCell);
+      doc.text(40, startY + 24, vm.quote.clientContact);
+      doc.text(40, startY + 28, vm.quote.clientDetails);
 
 
 
@@ -266,6 +267,15 @@
       doc.text(140, posY , "TOTAL");
       doc.text(170, posY , "R " + getTotal().toFixed(2));
 
+    }
+
+    function addDocumentFooter(doc, startY) {
+
+      doc.setTextColor(0);
+      doc.setFontSize(10);
+      doc.setFontType("bold");
+      doc.text(10, startY , "Quote Checked By :_____________________________");
+      
     }
 
     function add() {
